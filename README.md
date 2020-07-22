@@ -1,3 +1,3 @@
-### Simple Tic-Tac-Toe Application
+### TIC-TAC-TOE
 
- * AI opponent to be implemented
+Simple Tic-Tac-Toe console application implemented in C# with an AI opponent created by using a simple MinMax algorithm.
