@@ -6,7 +6,7 @@ namespace TTT
     {
        
         //Simple MinMax algorithm
-        public static Operator offerMove(GameState gameState, int depth, int supportedPlayer)
+        public static Operator offerMove(GameState gameState, int supportedPlayer, int depth)
         {
             Operator best = null;
             Operator operators = new Operator();
@@ -32,7 +32,7 @@ namespace TTT
         {
             if(state.isWinningState() || state.isOver())
             {
-                return Heuristic.heurNum(state, sp) - 0.1 * depth;
+                return Heuristic.heurNum(state, sp)+(depth*0.1);
             }
 
             double min = int.MaxValue;
@@ -58,7 +58,7 @@ namespace TTT
         {
             if(state.isOver() || state.isWinningState())
             {
-                return Heuristic.heurNum(state, sp)-0.1*depth;
+                return Heuristic.heurNum(state, sp)-(depth*0.1);
             }
 
             double max = int.MinValue;

@@ -42,7 +42,7 @@ namespace TTT
 
                 else
                 {
-                    step = StepAdvisor.offerMove(game, 0, -1);
+                    step = StepAdvisor.offerMove(game,0, -1);
                 }
 
                 if (step.isApplicable(game.getState()))
